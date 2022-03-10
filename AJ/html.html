@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<title>HTML</title>
+		<!--main--->
+		<style>
+			body {
+				margin:1vh;
+				background-color:#9df;
+				min-height:600px;
+				font-size:medium;
+				overflow:auto;
+			}
+			header {
+				height:5vh;
+				min-height:25px;
+				color:white;
+				background-color:#112435;
+				border 10px,solid,#112435;
+				border-radius: 25px 25px 0px 0px;
+				padding-left:5%;
+				padding-right:5%;
+			}
+			nav {
+				height:10vh;
+				min-height:50px;
+				background-color:#0080c0;
+				overflow:auto;
+			}
+			aside {
+				height:5vh;
+				min-height:25px;
+				color:white;
+				background-color:rgb(32, 33, 36);
+			}
+			article {
+				height:68vh;
+				background-color:#dff;
+				overflow:auto;
+			}
+			footer {
+				height:10vh;
+				min-height:50px;
+				background-color:#ddd;
+				border-radius: 0px 0px 25px 25px;
+				padding-left:5%;
+				padding-right:5%;
+				color:#777;
+			}
+		</style>
+		<!--zadania-->
+		<style>
+		
+
+			input {
+				background-color:#eef;
+			}
+			ul {
+				margin:0px;
+			}
+			ol {
+				margin:0px;
+			}
+			td {
+				border:1px solid black;
+			}
+			table {
+				margin:10px;
+				float:left;
+			}
+			h6 {
+				color:red;
+			}
+			#position,#dz1,#dz2,#dz3 {
+				line-height:60px;
+				background-color:white;
+				text-align:center;
+				padding:30px;
+				box-shadow:4px 4px 0 black;
+				position:relative;
+				right:100px;
+			}
+			#position {
+				padding:30px;
+				border:2px solid red;
+			}
+			#dz1 {
+				margin-bottom:15px;
+				border:1px solid green;
+				position:absolute;
+				top:-50px;
+				left:40px;
+			}
+			#dz2 {
+				border:1px solid blue;
+				top:50px;
+				width:60vw;
+				left:20vw;
+			}
+			#dz3 {
+			border:2px solid green;
+			position: fixed;
+			bottom:0px;
+			right:0px;
+			}
+			#positionn,#dz11,#dz22,#dz33 {
+				line-height:60px;
+				background-color:white;
+				text-align:center;
+				padding:30px;
+				box-shadow:4px 4px 0 black;
+				position:relative;
+				width:50vw;
+			}
+			#positionn {
+				padding:30px;
+				border:2px solid red;
+				width:80vw;
+				left:5vw;
+			}
+			#dz11 {
+				margin-bottom:15px;
+				border:1px solid green;
+				position:relative;
+				z-index:3;
+			}
+			#dz22 {
+				border:1px solid blue;
+				position:relative;
+				left:20px;
+				bottom:40px;
+				z-index:2;
+			}
+			#dz33 {
+			border:2px solid yellow;
+			position:relative;
+			left:40px;
+			bottom:80px;
+			z-index:1;
+			}
+		</style>
+		<!--float1 -->
+		<style>
+		.div1 {
+				line-height:60px;
+				background-color:#ddd;
+				text-align:center;
+				padding:0px;
+				margin:10px 0px 0px 0px;
+				box-shadow:4px 4px 0 black;
+				width:50vw;
+				max-width:300px;
+				height:10vh;
+				max-height:50px;
+		}
+		#float1 {
+				line-height:60px;
+				background-color:white;
+				text-align:center;
+				padding:30px;
+				box-shadow:4px 4px 0 black;
+				position:relative;
+				width:50vw;
+				padding:30px;
+				border:2px solid red;
+				width:80vw;
+				left:5vw;
+		}
+		#f1 {
+			float:left;
+		}
+		#f2 {
+			float:right;
+		}
+		#f3 {
+			clear:both;
+		}
+		</style>
+		<!--zadanie4-->
+		<style>
+		#p1 {
+			float:left;
+		}
+		#z1 {
+			clear:left;
+		}
+		#p2 {
+			float:right;
+		}
+		#z2 {
+			clear:right;
+		}
+		#p2:before {
+			content:attr(title);
+			content:open-quote;
+			color:red;
+		}
+		#p2:after {
+			content:close-quote;
+			color:red;
+		}
+		.bez:before {
+			content:no-open-quote;
+			color:#foo;
+		}
+		.bez:after {
+			content:no-close-quote;
+			color:#foo;
+		}
+		body {
+			counter-reset: licznik;
+		}
+		button:before {
+			counter-increment: licznik;
+			content: counter(licznik) ". "
+		}
+		ul {
+			counter-reset:licznik2;
+			list-style:none;
+			background-color:#dff;
+		}
+		ul li {
+			counter-increment:licznik2;
+		}
+		ul li:before {
+			content:counters(licznik2,'.')' - ';
+			color:#foo;
+		}
+		</style>
+		<!--more content-->
+		<style>
+		#b1:before {
+			content:"";
+			display:block;
+			clear:both;
+		}
+		@media screen {
+			div 
+			{
+				background-color:#9df;
+			}
+		}
+		@media all and(min-width:480px) and (max-width:800px)
+		{
+			div
+			{
+				background-color:red;
+			}
+		}
+		@media all and (min-device-width:800px)
+		{
+			div
+			{
+				bqackground-color:red;
+			}
+		}
+		@media all and (min-color:32)
+		{
+			div
+			{
+				bqackground-color:red;
+			}
+		}
+		@media all and (max-ascpect-ratio:4/3)
+		{
+			div{bqackground-color:red;
+		}
+		@media all and (min-resolution:200dpi)
+		{
+			div
+			{
+				background-color:red;
+			}
+		}
+		@media print ,tv,handheld (scan:progresive)
+		{
+			div
+			{
+				bqackground-color:red;
+			}
+		}
+		@media not all and (white)
+		{
+			div
+			{
+				bqackground-color:red;
+			}
+		}
+		<!-- strona zostanie wyświetlnona w urządzeniu monochromatyczneym ze skanowaniem progresywnym w trybie pionowym-->
+		</style>
+		<link rel="stylesheet" media ="handheld,tv" href="arkusz.css">
+	</head>
+	<body>
+		<div>
+			<header><center>HTML/CSS - Lab21/22 - AJ</center></header>
+			<nav>
+				<center>Menu nawigacyjne<br>
+					<button class="b1"onclick=hide("formularz1")>Formularz 1</button>
+					<button onclick=hide("listy")>Listy</button>
+					<button onclick=hide("zad1")>Zadanie 1</button>
+					<button onclick=hide("zad2")>Zadanie 2</button>
+					<button onclick=hide("tabele")>tabele</button>
+					<button onclick=hide("zad3")>Tabele - zad 1</button>
+					<button onclick=hide("p1")>Tabele - p1</button>
+					<button onclick=hide("cs1")>CSS</button>
+					<button onclick=hide("position")>Pos1</button>
+					<button onclick=hide("positionn")>Pos2</button>
+					<button onclick=hide("float1")>float1</button>
+					<button onclick=hide("zad4")>Zadanie 4</button>
+					<button onclick=hide("listy2")>Listy i paragrafy</button>
+					<button onclick=hide("mic")>mic</button>
+				</center>
+			</nav>
+			<aside>
+			<center>Użyj przycisków aby pokazać treść z danych zajęć</center></aside>
+			<article>
+				<form action="mailto:" method="post" enctype="text/plain" id ="formularz1" hidden>
+					<div id="form_id" style="padding-left:5%;padding-top:2%">
+						Formularz<br>
+						<input type="text" name="kod pocztowy"maxlength="6"></input><br>
+						<textarea name="treść" rows="5" cols="50">Treść</textarea>
+						<br>Hasło : 
+						<input type="password" name="haslo"></input><br>
+						<fieldset>
+						<legend>Wybierz odpowiedź</legend>
+						<input type="radio"name="odpowiedz"id="o1"value="tak">tak</input>
+						<label for="o1">tak</label>
+						<input type="radio"name="odpowiedz"id="o2"value="nie">nie</input>
+						<label for="o2">nie</label>
+						<input type="radio"name="odpowiedz"id="o3"value="niewiem" checked>nie wiem</input>
+						<label for="o3">Nie wiem</label>
+						</fieldset>
+						<br>Zainteresowania : 
+						<input type="checkbox" name="zainteresowania" value="sport">Sport</input>
+						<input type="checkbox" name="zainteresowania" value="ksiazki">Książki</input>
+						<input type="checkbox" name="zainteresowania" value="komputery">Komputery</input><br>
+						<input type="url"></input>
+						<br>Język<br>
+						<select name="jezyk" size="4" multiple>
+							<option value="pl" select>Polski</option>
+							<option value="en">Angieski</option>
+							<option value="de">Niemiecki</option>
+							<option value="fr">Francuski</option>
+						</select>
+						<input type="hidden" name="id" value="123"></input>
+						<br>
+						<input type="button" name="p1"value="Przycisk 1" onclick="Hello()"><br>
+						<input type="email" required placeholder="Podaj email"pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"></input><br>
+						<input type="number" min="0"max="255"step="2"></input><br>
+						<input type="submit"value="Wyslij"></input><br>
+						<input type="reset"value="zresetuj komputer">
+						<input type="time">
+						<input type="datatime">
+						<input type="tel">
+						<input type="search" autofocus>
+						<input type="range">
+					</div>
+				</form>			
+				<div id="listy" hidden>
+				<ul style="list-style-type:square;list-style-image:url('');margin:0px" >
+				<li>element 1</li>
+				<li>element 2</li>
+				</ul>
+				<ol lower-alpha >
+				<li>element 1</li>
+				<li>element 2</li>
+				<li>element 3</li>
+				</ol>
+				<dl>
+				<dt>HTML</dt>
+				<dd>HYPERTEXT MARKUP LANGUAGE</dd>
+				<dt>XHTML</dt>
+				<dd>EXTENSIBLE HYPERTEXT MARKUP LANGUAGE</dd>
+				<dt>CSS</dt>
+				<dd>CASCADING STYLE SHEETS</dd>
+				</dl>
+				<ul>
+				<li>Pozycja 1
+					<ul>
+						<li>Podpozycja 1.1</li>
+						<li>Podpozycja 1.2</li>
+					</ul>
+				</li>
+				<li>Pozycja 2
+					<ul>
+						<li>Podpozycja 2.1</li>
+						<li>Podpozycja 2.2</li>
+					</ul>
+				</li>
+				</ul>
+				</div>
+				<div id="zad1" hidden>
+								<ul>
+				<li>Pierwszy punkt listy
+					<ul>
+						<li>Pierwszy podpunkt punktu pierwszego</li>
+						<li>Drugi podpunkt punktu pierwszego</li>
+					</ul>
+				</li>
+				<li>Drugi punkt listy</li>
+				</ul>
+				</div>
+				<div id="zad2" hidden>
+				<ol>
+				<li>Pierwszy punkt listy numerowanej , ma dwa podpunkty numerowane
+					<ol>
+						<li>Ten podpunkt listy numerowanej ma dwa wypunktowania
+							<ul>
+								<li>Pierwsze wypunktowanie</li>
+								<li>Drugie wypunktowanie</li>
+							</ul>
+						</li>
+						<li>Ten podpunkt listy numerowanej nie ma dwa podpunktów</li>
+					</ol>
+				</li>
+				<li>Drugi punkt listy , ma podpunkty
+					<ul>
+						<li>Podpunkt 1</li>
+						<li>Podpunkt 2</li>
+					</ul>
+				</li>
+				<li>Trzeci punkt listy numerowanej , nie ma podpunktów</li>
+				</ol>
+				</div>
+				<div id="tabele" hidden>
+					<table>
+						<tr><th>11</th><th>12</th><th>13</th></tr>
+						<tr><td>21</td><td>22</td><td>23</td></tr>
+						<tr><td>31</td><td>32</td><td>33</td></tr>
+					</table>
+					<table>
+						<tr><th>11</th><th>12</th><th>13</th></tr>
+						<tr><td colspan='2'>21,22</td><td>23</td></tr>
+						<tr><td>31</td><td>32</td><td>33</td></tr>
+					</table>
+					<table>
+						<tr><td colspan= "2" rowspan="2">11,12,<br>21,22,</td><td>13</td></tr>
+						<tr><td>23</td></tr>
+						<tr><td>31</td><td>32</td><td>33</td></tr>
+					</table>
+				</div>
+				<div id="zad3" hidden>
+					<table>
+						<tr><td colspan="3">1 - 3</td><td colspan="3">1 - 3</td></tr>
+						<tr><td rowspan="4">11-22</td><td rowspan="2" colspan="2">22</td><td>11</td><td rowspan="2" colspan="2">12</td></tr>
+						<tr><td>32</td></tr>
+						<tr><td>22</td><td>23</td><td>11</td><td>12</td><td>13</td></tr>
+						<tr><td>32</td><td>33</td><td>11</td><td>12</td><td>13</td></tr>
+					</table>
+				</div>
+				<div id="p1" hidden>
+					<table style = "width:200px;height:200px;border:1px solid red;border-spacing:0px 0px; background-color:#eee;">
+						<tr style='background-image:url("data:image/png;base64,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");'>
+							<td>11</td><td>12</td>
+						</tr>
+						<tr>
+							<td>21</td><td>22</td>
+						</tr>
+					</table>
+				</div>
+				<div id="cs1" hidden>
+				<link rel="Styleshet" type="text/css" href="http://example.com/"/>
+				<h6>Tytuł rzędu 6</h6>
+				</div id="position">
+				<div id ="position" hidden>
+					<div id ="dz1">to jest pierwszy element div - długi przykładowy tekst mający na celu wydłużenie okna i sprawdzenie możliwości pozycjonowania</div>
+					<div id ="dz2"> to jest drugi element div</div>
+					<div id ="dz3">trzeci element div</div>
+				</div>
+				<div id ="positionn" hidden>
+					<div id ="dz11">to jest pierwszy element div</div>
+					<div id ="dz22"> to jest drugi element div</div>
+					<div id ="dz33">to jest trzeci element div</div>
+				</div>
+				<div id ="float1" hidden>
+					<div id ="f1" class="div1">to jest pierwszy element div</div>
+					<div id ="f2" class="div1"> to jest drugi element div</div>
+					<div id ="f3" class="div1"> to jest trzeci element div</div>
+				</div>
+				<div id ="zad4" hidden>
+					<div id ="z1" class="div1"><p id="p1">to jest pierwszy element div</p></div>
+					<div id ="z2" class="div1"><p id="p2" title="test ">to jest drugi element div</p></div>
+				</div>
+				<div id="listy2" hidden>
+					<ul>
+						<li>
+							<ul>
+								<li>element - li</li>
+								<li>element - li</li>
+								<li>element - li</li>
+							</ul>
+						</li>
+						<li>element - li</li>
+						<li>element - li</li>
+					</ul>
+					<p id="p2">element p w cudzysłowie</p>
+					<p id="p2" class="bez">element p bez cudzysłowia</p>
+					<p id="b1">element p 3</p>
+				</div>
+				<div id ="mic" style="width:400px;height:400px;margin:0px;padding:0px;background-color:white;" hidden>
+					<div style="width:50%;height:50%;margin:0px;padding:0px;background-color:red;float:left;">
+					
+					</div>
+					<div style="width:50%;height:50%;margin:0px;padding:0px;background-color:green;float:left;">
+					
+					</div>
+					<div style="width:50%;height:50%;margin:0px;padding:0px;background-color:blue;float:left;">
+					
+					</div>
+					<div style="width:50%;height:50%;margin:0px;padding:0px;background-color:yellow;float:left;">
+					
+					</div>
+				</div>
+				
+				
+			</article>
+			<footer><center>12021 - 12022</center></footer>
+		</div>
+		<script>
+		function hide(b) {
+			let a = document.getElementById(b)
+			a.hidden=(!a.hidden);
+		}
+		</script>
+	</body>
+</html>
