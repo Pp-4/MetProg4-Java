@@ -8,6 +8,7 @@ public class Main {
         //zad3();
         //zad4();
         zad5();
+        //zad6();
     }
     public static void zad1(){
         System.out.println("Podaj ciąg znaków");
@@ -62,5 +63,8 @@ public class Main {
         }
         String msg = (LeftBracket == RightBracket)?"OK":"Nie OK";
         System.out.println(msg);
+    }
+    public static void zad6(){
+        
     }
 }
