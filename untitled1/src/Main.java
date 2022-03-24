@@ -54,8 +54,7 @@ public class Main {
         System.out.println("Podaj ciąg znaków");
         Scanner scan = new Scanner(System.in);
         StringBuilder chain = new StringBuilder(scan.nextLine());
-        int LeftBracket = 0;
-        int RightBracket = 0;
+        int LeftBracket = 0, RightBracket = 0;
         for(int i = 0; i < chain.length(); i++){
             char temp = chain.charAt(i);
             if(temp == '(')LeftBracket++;
