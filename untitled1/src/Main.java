@@ -72,20 +72,28 @@ public class Main {
         if(chain.length()!=4) System.out.println("Nieprawidłowa długość ciągu!");
         else{
             int length = chain.length()*chain.length();
-            int[][] tablicaGodzin = new int[length][2];
+            int[][] tablicaGodzin = new int[length][4];
             for(int i = 0;i<chain.length();i++) {
                 for(int j = 0;j<chain.length();j++){
                     int temp = (chain.charAt(i)-48)*10+(chain.charAt(j)-48);
-                    tablicaGodzin[i*j][0] = temp > 23 ? 0 : chain.charAt(i);
-                    tablicaGodzin[i*j][1] = temp > 23 ? 0 : chain.charAt(j);
+                    tablicaGodzin[i*j][0] = temp > 23 ? 0 : chain.charAt(i)-48;
+                    tablicaGodzin[i*j][1] = temp > 23 ? 0 : chain.charAt(j)-48;
+                    String h = "1234";
+                    h.replace(Integer.toString(i-48),"");
+                    h.replace(Integer.toString(j-48),"");
+                    tablicaGodzin[i*j][2] = temp > 23 ? 0 : chain.charAt(h.charAt(0));
+                    tablicaGodzin[i*j][3] = temp > 23 ? 0 : chain.charAt(h.charAt(1));
                 }
             }
-            Arrays.sort(tablicaGodzin);
-            for(int i = length-1;i >= 0; i--){
-
-
+            int[] wyniki = new int[length];
+            for(int i = 0;i < length; i++){
+                int temp = tablicaGodzin[i][2]>=tablicaGodzin[i][3]?(tablicaGodzin[i][2]-48)*10+(tablicaGodzin[i][3]-48):(tablicaGodzin[i][3]-48)*10+(tablicaGodzin[i][2]-48);
+                temp = temp>60?0:temp;
+                wyniki[i] = (tablicaGodzin[i][0]-48)*10+tablicaGodzin[i][1]-48+temp;
             }
-
+            Arrays.sort(wyniki);
+            System.out.println(wyniki[wyniki.length-1]);
         }
+
     }
 }
