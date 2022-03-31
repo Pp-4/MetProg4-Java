@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
@@ -7,8 +8,8 @@ public class Main {
         //zad2();
         //zad3();
         //zad4();
-        zad5();
-        //zad6();
+        //zad5();
+        zad_układanie_godziny();
     }
     public static void zad1(){
         System.out.println("Podaj ciąg znaków");
@@ -64,7 +65,27 @@ public class Main {
         String msg = (LeftBracket == RightBracket)?"OK":"Nie OK";
         System.out.println(msg);
     }
-    public static void zad6(){
-        
+    public static void zad_układanie_godziny(){
+        System.out.println("Podaj ciąg czterech cyfr");
+        Scanner scan = new Scanner(System.in);
+        StringBuilder chain = new StringBuilder(scan.nextLine());
+        if(chain.length()!=4) System.out.println("Nieprawidłowa długość ciągu!");
+        else{
+            int length = chain.length()*chain.length();
+            int[][] tablicaGodzin = new int[length][2];
+            for(int i = 0;i<chain.length();i++) {
+                for(int j = 0;j<chain.length();j++){
+                    int temp = (chain.charAt(i)-48)*10+(chain.charAt(j)-48);
+                    tablicaGodzin[i*j][0] = temp > 23 ? 0 : chain.charAt(i);
+                    tablicaGodzin[i*j][1] = temp > 23 ? 0 : chain.charAt(j);
+                }
+            }
+            Arrays.sort(tablicaGodzin);
+            for(int i = length-1;i >= 0; i--){
+
+
+            }
+
+        }
     }
 }
