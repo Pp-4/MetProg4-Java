@@ -1,0 +1,2 @@
+Zdanie ,które ma zostać zapisane w pliku tekstowym
+ nowa linia
